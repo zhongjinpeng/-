@@ -1,6 +1,6 @@
 # 1.安装相关脚本,pip是 python 的包管理工具。在本文中将使用 python 版本的 shadowsocks，此版本的 shadowsocks 已发布到 pip 上，因此我们需要通过 pip 命令来安装.
   ```
-  yun install python-setuptools && easy_install pip
+  yum install python-setuptools && easy_install pip
   ```
 # 2.安装shadowsocks
   ```
