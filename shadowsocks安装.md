@@ -50,7 +50,8 @@
   ```
 # 6.测试
   telnet ip port
-# 7.查看shadowsocks日志
+# 7.查看shadowsocks日志和状态
   ```
+ less /var/log/shadowsocks.log
  systemctl status shadowsocks -l
   ```
