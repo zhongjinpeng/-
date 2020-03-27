@@ -45,7 +45,7 @@
 # 5.防火墙设置
   ```
   systemctl stop firewalld // 关闭防火墙
-  systemctl disable firewallld // 禁用防火墙,防止服务器重启后自动打开防火墙
+  systemctl disable firewalld // 禁用防火墙,防止服务器重启后自动打开防火墙
   systemctl status firewalld // 查看防火墙状态
   ```
 # 6.测试
