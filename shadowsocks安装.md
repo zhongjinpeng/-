@@ -23,9 +23,24 @@
     "fast_open": false
 }
 ```
-# 4.运行shadowsocks服务
+# 4.配置自启动
   ```
-  ssserver -c /etc/shadowsocks.json -d start
+  vi  /etc/systemd/system/shadowsocks.service 
+  ```
+  ```
+  [Unit]
+  Description=Shadowsocks
+
+  [Service]
+  TimeoutStartSec=0
+  ExecStart=/usr/bin/ssserver -c /etc/shadowsocks.json
+
+  [Install]
+  WantedBy=multi-user.target
+  ```
+  ```
+  systemctl enable shadowsocks
+  systemctl start shadowsocks
   ```
 # 5.防火墙设置
   ```
@@ -37,5 +52,5 @@
   telnet ip port
 # 7.查看shadowsocks日志
   ```
-  less /var/log/shadowsocks.log
+ systemctl status shadowsocks -l
   ```
